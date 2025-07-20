@@ -1,9 +1,0 @@
-name: Greeting 
-on: push
-jobs: 
-    greet:
-      runs-on: ubuntu-latest
-      steps:
-          - name: "greet world"
-            run: echo"Hello World!"
-
