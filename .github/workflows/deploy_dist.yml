@@ -17,7 +17,7 @@ jobs:
           node-version: 20
       
       - name: Cache Dependences
-        uses: action/cache@v4
+        uses: actions/cache@v4
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json')}}  
@@ -41,7 +41,7 @@ jobs:
           node-version: 20
 
       - name: Cache Dependences
-        uses: action/cache@v4
+        uses: actions/cache@v4
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json')}}  
