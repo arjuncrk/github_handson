@@ -72,12 +72,20 @@ jobs:
   deploy:
     needs : build
     runs-on: ubuntu-latest
+    permissions:
+        contents: write 
     steps: 
       - name: Download Dist Artifact
         uses: actions/download-artifact@v4  
         with:
             name: dist-files
             path: dist
+
+      - name: Deploy to github pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+            github_token: ${{ secrets.GITHUB_TOKEN }}
+            publish_dir: dist        
 
       - name: Deploy 
         run: echo "Deploy successfull"
