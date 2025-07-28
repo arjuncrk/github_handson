@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://arjuncrk.github.io/github_handson",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
